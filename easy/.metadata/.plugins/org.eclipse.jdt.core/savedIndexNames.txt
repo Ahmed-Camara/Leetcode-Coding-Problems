@@ -1,0 +1,6 @@
+INDEX VERSION 1.132+C:\Users\SYNAPSE_DEV3\Desktop\Leetcode\easy\.metadata\.plugins\org.eclipse.jdt.core
+318211616.index
+798130087.index
+1865797976.index
+3147025645.index
+4148649363.index
