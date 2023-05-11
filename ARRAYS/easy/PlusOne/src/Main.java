@@ -11,76 +11,27 @@ public static void main(String[] args) {
 		int[] arr = new int[1];
 		arr[0] = 8;
 		
-		
-		for(int s : nums) {
-			System.out.print(s+" ");
-		}
-		System.out.println();
-		
 		for(int s : plusOne(nums)) {
 			System.out.print(s+" ");
 		}
-		//System.out.println(plusOne(nums));
 	}
 	
 	public static int[] plusOne(int[] digits) {
 		
 		
-		int max = -9999, indexMax = 0;
+		int length = digits.length;
 		
-		if(digits.length == 1) {
-			return addOne(digits);
-		}
-		
-		
-		int flag = 1;
-		
-		for(int i = 1; i < digits.length; i++) {
+		for(int i = length - 1; i >= 0; i--) {
 			
-			if(digits[i] != digits[0]) {
-				flag=0;
-				break;
+			if(digits[i] < 9) {
+				digits[i]++;
+				return digits;
 			}
+			digits[i] = 0;
 		}
 		
-		if(flag == 1) {
-			return addOne(digits[0]);
-		}
-		
-		
-		
-		for(int i = 0; i < digits.length; i++) {
-			
-			if(digits[i] > max) {
-				indexMax = i;
-			}
-		}
-		
-		digits[indexMax] += 1;
-		
-		return digits;
-	}
-	
-	public static int[] addOne(int digits) {
-		int num = digits + 1;
-		
-		if(num >= 10) {
-			int firstNum = num%10;
-			num /= 10;
-			return new int[] {num, firstNum};
-		}
-		return new int[] {num};
-	}
-	
-	public static int[] addOne(int[] digits) {
-		return addOne(digits[0]);
-		/*int num = digits[0] + 1;
-		
-		if(num >= 10) {
-			int firstNum = num%10;
-			num /= 10;
-			return new int[] {num, firstNum};
-		}
-		return new int[] {num};*/
+		int[] finalResult = new int[length + 1];
+		finalResult[0] = 1;
+		return finalResult;
 	}
 }
