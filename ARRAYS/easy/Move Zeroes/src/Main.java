@@ -29,20 +29,21 @@ public class Main {
 	public static void moveZeroes(int []nums) {
 		
 		int val = 0;
-		int temp = 0;
+		int [] ns = new int[nums.length];
+		
 		for(int i = 0; i < nums.length; i++) {
 			
-			if(nums[i] == 0) {
-				temp = nums[i];
-			}else {
-				nums[val] = nums[i];
-				nums[i] = temp;
-				val = val + 1;
+			if(nums[i] != 0) {
+				ns[val] = nums[i];
+				val++;
 			}
 		}
-		for(int num : nums) {
-			System.out.print(num+" ");
+		
+		for(int i = 0; i < ns.length; i++) {
+			
+			 nums[i] = ns[i];
 		}
+		
 	}
 
 }
