@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class Main {
 
@@ -10,29 +11,27 @@ public class Main {
 		nums[2] = 2;
 		nums[3] = 1;
 		nums[4] = 2;
-		System.out.println(singleNumber(nums));
+		
+		int[] num = new int[3];
+		num[0] = 2;
+		num[1] = 2;
+		num[2] = 1;
+		System.out.println(singleNumber(num));
 	}
 	
 	public static int singleNumber(int[] nums) {
-        boolean res = false;
-        int num;
-        for(int i = 1; i < nums.length; i++){
+		
+		Arrays.sort(nums);
+		
+		int len = nums.length-1;
+		for(int i = 0; i < len ; i+=2) {
+			
+			if(nums[i] != nums[i+1]){
+				return nums[i];
+			}
+		}
 
-            for(int j = 0; j < nums.length; j++){
-
-                if(nums[i] == nums[j] && i != j){ 
-                    break;
-                }else{
-                    res = true;
-                }
-            }
-
-            if(res == true){
-                return nums[i];
-            }
-        }
-
-        return -1;
+        return nums[len];
     }
 
 }
