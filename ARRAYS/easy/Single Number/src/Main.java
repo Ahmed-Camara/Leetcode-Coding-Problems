@@ -16,7 +16,7 @@ public class Main {
 		num[0] = 2;
 		num[1] = 2;
 		num[2] = 1;
-		System.out.println(singleNumber(num));
+		System.out.println(singleNumber(nums));
 	}
 	
 	public static int singleNumber(int[] nums) {
