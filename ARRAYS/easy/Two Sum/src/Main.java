@@ -19,8 +19,6 @@ public class Main {
 	
 	public static int[] twoSum(int []nums, int target) {
 		int []index = new int[2];
-		boolean res = false;
-		
 		for(int i = 1; i < nums.length; i++) {
 			
 			int j = i - 1;
@@ -30,15 +28,12 @@ public class Main {
 				if(nums[i] + nums[j] == target) {
 					index[0] = j;
 					index[1] = i;
-					res = true;
-					break;
+					return index;
 				}
 				j--;
 			}
-			
-			if(res == true) break;
 		}
-		return index;
+		return null;
 	}
 
 }

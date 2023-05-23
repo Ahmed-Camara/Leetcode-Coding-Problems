@@ -10,3 +10,4 @@ INDEX VERSION 1.132+C:\Users\SYNAPSE_DEV3\Desktop\Leetcode\ARRAYS\easy\.metadata
 3147025645.index
 26518750.index
 399845411.index
+90426594.index
