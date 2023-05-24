@@ -33,28 +33,22 @@ public class Main {
 	
 	public static boolean containsNearbyDuplicate(int[] nums, int k) {
 		//Arrays.sort(nums);
-		int j = 0;
-		System.out.println(nums.length);
-		for(int i = 0; i < nums.length; i++) {
-			j = i + 1;
-			
-			if(nums[i] == nums[j]) {
-				return true;
-			}
-		}
-		/*int j = 0;
+		
+		if(k==0) return false;
 		Set<Integer> list = new HashSet<>();
 		for(int i = 0; i < nums.length; i++) {
 			
-			if(Math.abs(j - i) <= k) {
-				if(list.contains(nums[i]))
-					return true;
-				
-				
+			if(list.contains(nums[i]))
+				return true;
+			
+			if(i >= k) {
+				list.remove(nums[i-k]);
 			}
+			
+			
 			list.add(nums[i]);	
 			
-		}*/
+		}
 		return false;
 	}
 
