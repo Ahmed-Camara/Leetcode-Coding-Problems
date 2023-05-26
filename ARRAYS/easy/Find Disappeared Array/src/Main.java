@@ -42,11 +42,9 @@ public class Main {
 			results.add(i);
 		}
 		
-		for(int i = 0; i < nums.length; i++) {
-			if(results.contains(nums[i]) ){				
-				results.remove((Integer)nums[i]);
-			}
-		}
+		for (int num : nums) {
+	        results.remove(num);
+	    }
 		
 		
 		return new ArrayList<>(results);
