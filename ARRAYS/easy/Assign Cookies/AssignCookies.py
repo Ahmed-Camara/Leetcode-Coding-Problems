@@ -16,20 +16,3 @@ def findContentChildren(g, s):
         else:
             j = j  + 1
     return i
-
-g = [1,2,3]
-s = [1,1]
-c = findContentChildren(g,s)
-print(c)
-
-
-g = [1,2]
-s = [1,2,3]
-c = findContentChildren(g,s)
-print(c)
-
-
-g = [1,2,3]
-s = [3]
-c = findContentChildren(g,s)
-print(c)
