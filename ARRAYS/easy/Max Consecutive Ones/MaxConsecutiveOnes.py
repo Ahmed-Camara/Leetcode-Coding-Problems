@@ -1,25 +1,28 @@
-def findMaxConsecutiveOnes(nums):
-    count = 0
-    maxCount = -1
+class Solution(object):
 
-    for i in range(len(nums)):
-        for j in range(i+1,len(nums)):
+    def findMaxConsecutiveOnes(self,nums):
+        maxCount = 0
 
-            if nums[i] != nums[j]:
-                break
-            else:
+
+        count = 0
+
+        for i in range(len(nums)):
+
+            if nums[i] == 0:
+                count = 0
+            elif nums[i] == 1:
                 count = count + 1
-        if count > maxCount:
-            maxCount = count
-            count = 0
-    return maxCount
+                maxCount = max(count,maxCount)
+        
+         
+        return maxCount
 
 
 num = [1,1,0,1,1,1]
-print(findMaxConsecutiveOnes(num))
+print(Solution().findMaxConsecutiveOnes(num))
 
 num = [1,0,1,1,0,1]
-print(findMaxConsecutiveOnes(num))
+print(Solution().findMaxConsecutiveOnes(num))
 
 num = [0]
-print(findMaxConsecutiveOnes(num))
+print(Solution().findMaxConsecutiveOnes(num))
