@@ -24,6 +24,7 @@ class Solution(object):
         for i in score:
             ranks.append(dict_rank[i]) 
         return ranks
+    
 
 print(Solution().findRelativeRanks([5,4,3,2,1]))
 print(Solution().findRelativeRanks([10,3,8,9,4]))
