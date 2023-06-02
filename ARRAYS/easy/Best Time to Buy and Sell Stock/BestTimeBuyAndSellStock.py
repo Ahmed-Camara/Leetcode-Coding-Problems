@@ -9,11 +9,12 @@ class Solution(object):
         right = 1
 
         length = len(prices)
+        print("length : ",length)
         while left < length and right < length:
             
             profit = prices[right] - prices[left]
 
-            if right == length:
+            if right == length-1:
                 left = left + 1
                 right = left + 1
 
