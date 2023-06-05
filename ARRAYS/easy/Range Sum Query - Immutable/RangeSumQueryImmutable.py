@@ -4,6 +4,7 @@ class NumArray(object):
         """
         :type nums: List[int]
         """
+        self.nums = nums
         
 
     def sumRange(self, left, right):
@@ -12,4 +13,12 @@ class NumArray(object):
         :type right: int
         :rtype: int
         """
+        temp = self.nums[left:right+1]
+        sumNumber = sum(temp)
+        
+        return sumNumber
+
+print(NumArray([-2, 0, 3, -5, 2, -1]).sumRange(0,2))
+
+
         
