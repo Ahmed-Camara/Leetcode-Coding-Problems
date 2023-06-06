@@ -6,9 +6,12 @@ class Solution(object):
         :rtype: List[int]
         """
 
-        results = []
+        results = [1,2]
         window = ""
-        return results
+        windowSize = sum(len(word) for word in words)
+        print("windowSize : ",windowSize)
+        
+        return results.sort()
     
 print(Solution().findSubstring("barfoothefoobarman",["foo","bar"]))
 print(Solution().findSubstring("wordgoodgoodgoodbestword",["word","good","best","word"]))
