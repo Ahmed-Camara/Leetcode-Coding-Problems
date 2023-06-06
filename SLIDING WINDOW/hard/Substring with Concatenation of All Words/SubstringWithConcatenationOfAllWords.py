@@ -5,3 +5,12 @@ class Solution(object):
         :type words: List[str]
         :rtype: List[int]
         """
+
+        results = []
+        window = ""
+        return results
+    
+print(Solution().findSubstring("barfoothefoobarman",["foo","bar"]))
+print(Solution().findSubstring("wordgoodgoodgoodbestword",["word","good","best","word"]))
+print(Solution().findSubstring("barfoofoobarthefoobarman",["bar","foo","the"]))
+#print(Solution().findSubstring("bbbbb",))
