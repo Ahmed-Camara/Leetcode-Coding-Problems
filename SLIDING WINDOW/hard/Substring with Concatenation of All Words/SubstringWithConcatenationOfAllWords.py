@@ -6,14 +6,24 @@ class Solution(object):
         :rtype: List[int]
         """
 
-        results = [1,2]
+        results = [5,1,2]
         window = ""
-        windowSize = sum(len(word) for word in words)
-        print("windowSize : ",windowSize)
+        windowSize = len(words[0])
+        words_dict = {}
+        all_word_len = sum(len(word) for word in words)
+
+        for word in words:
+            words_dict[word] = words_dict.get(word, 0) + 1
         
-        return results.sort()
+        print("windowSize : ",windowSize)
+        print("len(s) : ",len(s))
+        for i in range(len(s) - windowSize + 1):
+            w = s[i:i + windowSize]
+            if w in words:
+                print("w : ",w)
+        return sorted(results)
     
 print(Solution().findSubstring("barfoothefoobarman",["foo","bar"]))
-print(Solution().findSubstring("wordgoodgoodgoodbestword",["word","good","best","word"]))
-print(Solution().findSubstring("barfoofoobarthefoobarman",["bar","foo","the"]))
+#print(Solution().findSubstring("wordgoodgoodgoodbestword",["word","good","best","word"]))
+#print(Solution().findSubstring("accord",["bar","foo","the"]))
 #print(Solution().findSubstring("bbbbb",))
