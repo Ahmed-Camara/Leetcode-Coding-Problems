@@ -16,7 +16,7 @@ class Solution(object):
                 maxLength = min(i-j+1,maxLength)
                 windowSum = windowSum - nums[j]
                 j = j + 1
-        return maxLength
+        return j if j == 0 else maxLength
 
 print(Solution().minSubArrayLen(7,[2,3,1,2,4,3]))
 print(Solution().minSubArrayLen(4,[1,4,4]))
