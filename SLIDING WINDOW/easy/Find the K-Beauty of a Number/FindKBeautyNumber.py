@@ -1,5 +1,5 @@
-class Solution(object):
-    def divisorSubstrings(self, num, k):
+class Solution:
+    def divisorSubstrings(self, num: int, k: int) -> int:
         """
         :type num: int
         :type k: int
