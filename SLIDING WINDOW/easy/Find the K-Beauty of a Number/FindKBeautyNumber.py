@@ -1,21 +1,15 @@
 class Solution:
     def divisorSubstrings(self, num: int, k: int) -> int:
-        """
-        :type num: int
-        :type k: int
-        :rtype: int
-        """
+        num = str(num)
         length = len(num)
-        text = ""
+        window = ""
         count = 0
         for i in range(length):
+            window = num[i:i+k]
             
-            text = text + num[i]
-            #print("text : ",text)
-            if len(text) == k:
-                if int(text) != 0 and int(num) % int(text) == 0:
-                    count = count + 1
-                text = num[i]
+            if len(window) == k:
+                if int(window) != 0 and int(num) % int(window) == 0:
+                    count += 1
         return count
 print(Solution().divisorSubstrings("240",2))
 print(Solution().divisorSubstrings("430043",2))
