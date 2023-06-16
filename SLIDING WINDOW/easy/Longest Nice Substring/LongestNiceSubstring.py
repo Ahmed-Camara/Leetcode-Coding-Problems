@@ -1,3 +1,4 @@
 class Solution:
     def longestNiceSubstring(self, s: str) -> str:
-        pass
+        longestSubstring = ""
+        return longestSubstring
