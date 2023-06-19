@@ -12,7 +12,7 @@ class Solution:
         minDiff = float('inf')
         nums.sort()
         for i in range(length - k + 1):
-            minDiff = int(min(nums[i+k-1] - nums[i], minDiff))
+            minDiff = min(abs(nums[i+k-1] - nums[i]), minDiff)
 
         return minDiff
 
