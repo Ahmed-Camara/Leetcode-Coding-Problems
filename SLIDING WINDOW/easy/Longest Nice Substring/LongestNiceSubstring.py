@@ -1,7 +1,12 @@
 class Solution:
     def longestNiceSubstring(self, s: str) -> str:
-        longestSubstring = ""
-        return longestSubstring
+        longestSubstring = "d"
+
+        length = len(s)
+
+        for i in range(length):
+            pass
+        return "" if length <= 1 else longestSubstring
 
 
 print(Solution().longestNiceSubstring("YazaAay"))
